@@ -59,3 +59,55 @@ site_python_flask/
 ```
 
 
+## Prérequis
+
+* Python 3.x installé
+* Windows (PowerShell)
+* Git (pour cloner le dépôt)
+
+---
+
+## Installation et lancement
+
+1. **Cloner le dépôt :**
+
+```powershell
+git clone https://github.com/tonPseudo/site_python_flask.git
+cd site_python_flask
+```
+
+2. **Lancer le script PowerShell pour créer le venv, installer les dépendances et démarrer l'application :**
+
+* **Windows Powershell :**
+
+```powershell
+.\script_lancement_site.ps1
+#NB: pensez a gerer vos droits d execution de script : Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+* **Linux/macOS :**
+
+```bash
+chmod +x script_lancement_site.sh
+./script_lancement_site.sh
+```
+
+
+* Le script fait automatiquement :
+
+  * Création d'un environnement virtuel `venv` si nécessaire
+  * Activation du venv
+  * Installation des packages listés dans `requirements.txt`
+  * Lancement de l'application Flask (`run_app.py`)
+
+3. **Quitter l'environnement virtuel :**
+
+Après avoir utilisé l'application, pour quitter le venv, tapez simplement :
+
+```powershell
+deactivate
+```
+
+## Notes
+
+* Choisissez le script correspondant à votre système : `script_lancement_site.ps1` pour Windows PowerShell, `script_lancement_site.sh` pour Linux/macOS.
